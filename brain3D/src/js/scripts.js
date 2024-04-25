@@ -9,8 +9,8 @@ const canvasContainer = document.getElementById('canvas-container');
 canvasContainer.appendChild(renderer.domElement);
 
 const canvas = renderer.domElement;
-canvas.width = 880;
-canvas.height = 550 ; // Alto deseado
+canvas.width = 500;
+canvas.height = 500 ; // Alto deseado
 
 const scene = new THREE.Scene();
 
