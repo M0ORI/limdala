@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="google-signin-client_id"
+    content="422527817374-gfe62mcf943bjervq02evgatd18cc2vc.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <title>Límdala</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav_bar">
+      <section class="logo">
+        <img src="./src/images/logo-clean.svg" alt="Límdala Logo">
+        <a>Límdala</a>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="">Contacto</a></li>
+          <li><a href="" id="user-name">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <p class="eslogan"> Mente <span style="color: #f5f5f5;">sana</span>
+        <br> vida sana
+      </p>
+    </div>
+
+    <div class="seccion-1">
+      <script src="js/googleAuth.js"></script>
+      <img src="./src/images/logo-clean.svg" alt="Límdala Logo" class="image">
+      <div class="g-signin2" data-onsuccess="onSignIn" onclick="handleSignInClick()" onclick="checkAuth()">
+        <a href="" id="user-name" onclick="checkAuth()">Login</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <p>© 2024 Límdala. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
