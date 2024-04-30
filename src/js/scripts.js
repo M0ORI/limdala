@@ -48,10 +48,10 @@ camera.updateProjectionMatrix();
 renderer.setSize(containerWidth, containerHeight);
 
 let myModel;
-rgbeLoader.load('../static/hdrFree.hdr', function (texture) {
+rgbeLoader.load('/static/hdrFree.hdr', function (texture) {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = texture;
-    gltfLoader.load('../static/Brain.glb', function (gltf) { 
+    gltfLoader.load('/static/Brain.glb', function (gltf) { 
         
         const model = gltf.scene;
         model.center;
