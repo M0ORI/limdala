@@ -7,4 +7,4 @@ Paquetes necesarios:
 Comandos para ejecutar: 
 - npm install (Para descargar las depencias necesarias)
 
-- npx parcel src/index.html (para correr el proyecto)
+- npm run dev (correr el proyecto)
