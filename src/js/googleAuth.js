@@ -14,7 +14,7 @@ function onSignIn(googleUser) {
 }
 window.handleSignInClick = function () {
 
-  window.location.href = 'model.html';
+  window.location.href = 'home.html';
 };
 
 function checkAuth() {
