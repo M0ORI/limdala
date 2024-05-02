@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Límdala</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav_bar">
+        <section class="logo">
+          <img src="./src/images/logo-clean.svg" alt="Límdala Logo">
+          <a>Límdala</a>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="">Contacto</a></li>
+            <li><a href="" id="user-name">Registrarse</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <section class="login_form">
+        <section class="logo_imagen">
+          <img src="./src/images/logo-clean.svg" alt="Límdala Logo" />
+          <a>Límdala</a>
+        </section>
+        <form class="login_inputs" action="index.html" method="POST">
+          <label for="Correo">Correo</label>
+          <input type="email" placeholder="Correo" name="Correo" required />
+          <label for="Contraseña">Contraseña</label>
+          <input
+          type="password"
+          placeholder="Contraseña"
+          name="Contraseña"
+          required
+          />
+          <input type="submit" value="Ingresar" />
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
