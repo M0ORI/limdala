@@ -46,9 +46,52 @@ nav a {
 
 /*Chat style*/
 
+main {
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+}
 
+.chatContainer {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin: 20px 20px;
+}
 
+.chat {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(93, 115, 126);
+    border-radius: 20px;
+    color: black;
+    padding: 15px 15px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.message-input {
+    background-color: rgb(93, 115, 126);
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px 10px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 60%;
+}
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+.message.received {
+    background-color: #fff;
+    align-self: flex-start;
+}
 
 footer {
     color: rgb(93, 115, 126);
