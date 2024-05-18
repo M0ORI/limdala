@@ -29,7 +29,8 @@
 
     // Crear el nuevo elemento 
     var nuevoMensaje = document.createElement("div");
-    nuevoMensaje.className = sender == 'user' ? 'message sent' : 'message received';
+    // true = mensaje envido por el susuario, false = mensaje enviado por el chatbot
+    nuevoMensaje.className = sender ? 'message sent' : 'message received';
 
     // Crear el nuevo elemento <p>
     var texto = document.createElement("p");
@@ -41,4 +42,22 @@
     chat.appendChild(nuevoMensaje);
 
 }
+
+function sendMessage() {
+    var userInput = document.getElementById('user-input').value;
+    messsageAppend(true, userInput); //Menssaje enviado por el usuario
+
+    // Llamar a la función para que el bot responda
+    botResponse(userInput);
+
+    document.getElementById('user-input').value = ''; // Limpiar el campo de entrada después de enviar el mensaje
+}
+
+function botResponse(userInput) {
+    // Aquí puedes agregar la lógica para que el bot responda al mensaje del usuario
+    // Por ahora, simplemente responderemos con un mensaje predefinido
+    var botResponse = "¡Hola! Soy un bot. Gracias por tu mensaje: '" + userInput + "'.";
+    messsageAppend(false, botResponse); //Respusta del bot
+}
+
 
