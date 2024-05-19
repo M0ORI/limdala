@@ -8,10 +8,10 @@
             'Authorization': 'Bearer ' + API_KEY
         },
         body : JSON.stringify({
-            model : 'gpt-3.5-turbo-16k',
-            prompt: prompt,
-            max_tokens: 10,
-            temperature : 0.9
+            model : 'gpt-3.5-turbo',
+            messages : [{role: "system", content: prompt }]
+            //max_tokens: 10,
+            //temperature : 0.9
         })
     })
 
@@ -19,8 +19,6 @@
     //console.log(data)
     return data;
  }
-
-//getCompletition()
 
 const button = document.getElementById('send');
 const userInput = document.getElementById('user-input');
@@ -30,10 +28,11 @@ button.addEventListener('click', async () => {
         return
     }
     const prompt = userInput.value;
-    const response = await getCompletition(prompt);
-    console.log(response) 
+    //const response = await getCompletition(prompt);
     sendMessage(prompt)
-    //botResponse(response)     
+    //console.log(response) 
+    //botResponse(response.choices[0].messages.content)     
+    //botResponse('soy el chat')
 })
  
 function sendMessage(prompt) {

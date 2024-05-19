@@ -101,12 +101,21 @@ button:hover {
     max-width: 60%;
 }
 .message.sent {
-    background-color: #dcf8c6;
+    background-color: #02111b;
     align-self: flex-end;
 }
+
+.message.sent p {
+    color: white;
+}
+
 .message.received {
-    background-color: #fff;
+    background-color: #042840;
     align-self: flex-start;
+}
+
+.message.received p {
+    color: white;
 }
 
 footer {
