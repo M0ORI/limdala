@@ -12,10 +12,10 @@
     "vite": "^5.2.10"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.43.2",
     "three": "^0.163.0"
   },
   "staticFiles": {
     "staticOutPath": "public/static"
   }
 }
-

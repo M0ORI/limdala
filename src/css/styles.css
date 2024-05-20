@@ -198,7 +198,8 @@ script{
     align-items: center;
 }
 
-.login_form{
+.login_form,
+.signup_form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,7 +227,8 @@ script{
     font-size: 70px;
 }
 
-.login_inputs {
+.login_inputs,
+.signup_inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,12 +236,14 @@ script{
     width: 50vw;
 }
 
-.login_inputs > label {
+.login_inputs > label,
+.signup_inputs > label{
     font-size: 20px;
     margin: 5px;
 }
 
-.login_inputs > input {
+.login_inputs > input,
+.signup_inputs > input {
     border: none;
     border-bottom: 2px solid #f5f5f56d;
     border-radius: 10px;
@@ -252,12 +256,14 @@ script{
     transition-duration: 300ms;
 }
 
-.login_inputs > input:focus, input:hover {
+.login_inputs > input:focus, input:hover,
+.signup_inputs > input:focus, input:hover  {
     border-bottom: 2px solid #f5f5f5;
     transition-duration: 300ms;
 }
 
-.login_inputs > input[type="submit"] {
+.login_inputs > input[type="submit"],
+.signup_inputs > input[type="submit"] {
     background: #f5f5f5;
     color: #02111b;
     font-size: 20px;
@@ -266,11 +272,12 @@ script{
     border: none;
     cursor: pointer;
     transition-duration: 300ms;
-    width: 40%;
+    width: 50%;
     opacity: 0.8;
 }
 
-.login_inputs > input[type="submit"]:hover {
+.login_inputs > input[type="submit"]:hover,
+.signup_inputs > input[type="submit"]:hover {
     background: #f5f5f5;
     color: #02111b;
     transition-duration: 300ms;
