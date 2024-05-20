@@ -32,7 +32,7 @@ button.addEventListener('click', async () => {
     sendMessage(prompt)
     //console.log(response) 
     //botResponse(response.choices[0].messages.content)     
-    //botResponse('soy el chat')
+    botResponse('soy el chat')
 })
  
 function sendMessage(prompt) {
