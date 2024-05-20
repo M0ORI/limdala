@@ -1,6 +1,7 @@
 {
   "name": "limdala",
   "private": true,
+  "sourcemap": "true",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

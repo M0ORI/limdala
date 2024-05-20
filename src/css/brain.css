@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -115,11 +116,7 @@ nav a {
     color: #02111b;
     font-size: 25px;
     font-weight:bolder;
-    position: relative;
-    left: 90px;
 }
-
-
 
 footer {
     padding: 30px 30px;
