@@ -10,10 +10,10 @@ async function getCompletition(prompt) {
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario." },
+                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario. Evita respuestas muy largas." },
                 { role: "user", content: prompt }
             ],
-            max_tokens: 100,
+            //max_tokens: 100,
             temperature: 0.7
         })
     });
@@ -35,7 +35,7 @@ button.addEventListener('click', async () => {
     loadingIndicator.style.display = 'block';
     const response = await getCompletition(prompt);
     loadingIndicator.style.display = 'none';
-    console.log(response);
+    //console.log(response);
     typeText(response.choices[0].message.content);
 });
 
@@ -49,7 +49,7 @@ userInput.addEventListener('keypress', async (e) => {
         loadingIndicator.style.display = 'block';
         const response = await getCompletition(prompt);
         loadingIndicator.style.display = 'none';
-        console.log(response);
+        //console.log(response);
         typeText(response.choices[0].message.content);
     }
 });
@@ -80,6 +80,9 @@ function messsageAppend(sender, message) {
     nuevoMensaje.appendChild(texto);
 
     chat.appendChild(nuevoMensaje);
+
+    // Desplazar hacia abajo al agregar un nuevo mensaje
+    chat.scrollTop = chat.scrollHeight;
 }
 
 function typeText(text) {
@@ -87,13 +90,16 @@ function typeText(text) {
     messageContainer.className = 'message received';
     const messageElement = document.createElement("p");
     messageContainer.appendChild(messageElement);
-    document.getElementById('message-log').appendChild(messageContainer);
+    const chat = document.getElementById('message-log');
+    chat.appendChild(messageContainer);
 
     let index = 0;
     function type() {
         if (index < text.length) {
             messageElement.textContent += text.charAt(index);
             index++;
+            // Desplazar hacia abajo en cada iteración
+            chat.scrollTop = chat.scrollHeight;
             setTimeout(type, 50);
         }
     }
@@ -105,3 +111,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialMessage = "Hola, soy Limdala y estoy aquí para apoyarte en lo que necesites. ¿En qué puedo ayudarte hoy?";
     botResponse(initialMessage);
 });
+

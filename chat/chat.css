@@ -73,6 +73,11 @@ main {
     overflow-y: auto;
 }
 
+.chat p {
+    word-break: break-word;
+}
+
+
 .input {
     display: flex;
     flex-direction: row;
@@ -88,7 +93,11 @@ main {
     padding: 10px;
     width: calc(100% - 50px);
     border: none;
-    color: white;
+    color: black;
+}
+
+.message-input::placeholder {
+    color: black;
 }
 
 button {
@@ -120,10 +129,12 @@ button img {
 }
 
 .message {
+    flex-shrink: 0;
+    width: fit-content;
+    max-width: 60%;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
-    max-width: 60%;
 }
 
 .message.sent {
@@ -138,6 +149,7 @@ button img {
 .message.received {
     background-color: #042840;
     align-self: flex-start;
+    
 }
 
 .message.received p {
