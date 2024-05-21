@@ -7,7 +7,6 @@
     <title>Chatbot</title>
 </head>
 <body>
-
     <header>
         <div class="nav_bar">
             <section class="logo">
@@ -26,9 +25,11 @@
     <main>
         <section class="chatContainer">
             <div class="chat" id="message-log"></div>
-            <input class="message-input" id="user-input" type="text">
-            <button id="send"> Enviar </button>
-            
+            <div class="input">
+                <input class="message-input" id="user-input" type="text" placeholder="Escribe tu mensaje...">
+                <button id="send"><img src="send_icon.png" alt="Enviar"></button>
+            </div>
+            <div id="loading" class="loading" style="display: none;">Escribiendo...</div>
         </section>
     </main>
 
@@ -39,6 +40,5 @@
     </footer>
 
     <script src="chat.js"></script>
-
 </body>
 </html>
