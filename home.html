@@ -20,7 +20,7 @@
             <nav>
                 <ul>
                     <li><a href="">Contacto</a></li>
-                    <li><a id="userNameLink">Límdala</a>
+                    <li><a id="userName"></a></li>
                 </ul>
             </nav>
         </div>
@@ -31,10 +31,8 @@
             <div class="items">
                 <div class="presentacion">
                     <h1 class="titulo">Disfuta del recorrido</h1>
-                    <br>
-                    <p class="texto">Pulsa sobre el cerebro para iniciar tu viaje.</p>
-                    <br>
                     <p class="texto">Recuerda, es un momento para ti, relajate y disfruta.</p>
+                    <p class="texto">Escribe como te sientes en este momento.</p>
                 </div>
                 <section class="chatContainer">
                     <div class="chat" id="message-log"></div>
@@ -47,8 +45,8 @@
             </div>
             <div class="contenedorModelo">
                 <div id='canvas-container'>
-                    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.2.4/build/spline-viewer.js"></script>
-                    <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/YQQdrnszUvArQLGX/scene.splinecode"></spline-viewer> -->
+                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
+                    <spline-viewer url="https://prod.spline.design/f7l2nf5ghJiFh30g/scene.splinecode"></spline-viewer>
                 </div>
                 <button>
                     Regresar
@@ -64,7 +62,7 @@
     </footer>
 
     <script src="./src/js/chat.js"></script>
-
+    <script type="module" src="./src/js/home.ts"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 email: email as string,
                 password: password as string,
             }).then((response) => {
-                window.location.href = '/'
+                window.location.href = '/home.html'
             }).catch((error) => {
                 alert(error.error_description || error.message)
                 window.location.href = '/html/login.html'

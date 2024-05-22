@@ -1,0 +1,95 @@
+@import './styles.css';
+
+.container{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form,
+.signup_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    /*border: 10px solid rgba(93, 115, 126, 0.224);*/
+    border-radius: 20px;
+    color: var(--color-quinary);
+}
+
+.logo_imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10%;
+}
+
+.logo_imagen > img {
+    width: 500px; /* Set the desired width */
+    height: 300px; /* Set the desired height */
+}
+
+.logo_imagen > a{
+    text-align: center;
+    font-size: 70px;
+}
+
+.login_inputs,
+.signup_inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.login_inputs > label,
+.signup_inputs > label{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.login_inputs > input,
+.signup_inputs > input {
+    border: none;
+    border-bottom: 1px solid var(--color-quinary);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--color-quinary);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    transition-duration: 300ms;
+}
+
+.login_inputs > input:focus, input:hover,
+.signup_inputs > input:focus, input:hover  {
+    border-bottom: 1px solid var(--color-quinary);
+    transition-duration: 300ms;
+}
+
+.login_inputs > input[type="submit"],
+.signup_inputs > input[type="submit"] {
+    background: var(--color-quinary);
+    color: var(--color-primary);
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 300ms;
+    width: 50%;
+    opacity: 0.8;
+}
+
+.login_inputs > input[type="submit"]:hover,
+.signup_inputs > input[type="submit"]:hover {
+    background: var(--color-quinary);
+    color: var(--color-primary);
+    transition-duration: 300ms;
+    transform: scale(1.1);
+    opacity: 1;
+}
