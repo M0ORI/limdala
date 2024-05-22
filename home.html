@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/brain.css">
+    <link rel="stylesheet" href="./src/css/home.css">
+    <link rel="stylesheet" href="./src/css/chat.css">
     <script src="./src/js/googleAuth.js"></script>
     <title>Límdala</title>
 </head>
@@ -24,6 +25,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="contenedor">
             <div class="items">
@@ -34,11 +36,14 @@
                     <br>
                     <p class="texto">Recuerda, es un momento para ti, relajate y disfruta.</p>
                 </div>
-                <div class="chat">
-                    <textarea id="" cols="30" rows="10"></textarea>
-                    <br>
-                    <input type="text" placeholder="Cuentanos sobre ti...">
-                </div>
+                <section class="chatContainer">
+                    <div class="chat" id="message-log"></div>
+                    <div class="input">
+                        <input class="message-input" id="user-input" type="text" placeholder="Escribe tu mensaje...">
+                        <button id="send"><img src="./src/images/send_icon.png" alt="Enviar"></button>
+                    </div>
+                    <div id="loading" class="loading" style="display: none;">Escribiendo...</div>
+                </section>
             </div>
             <div class="contenedorModelo">
                 <div id='canvas-container'>
@@ -51,11 +56,15 @@
             </div>
         </section>
     </main>
+
     <footer>
         <div>
             <p>© 2024 Límdala. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="./src/js/chat.js"></script>
+
 </body>
 
 </html>
