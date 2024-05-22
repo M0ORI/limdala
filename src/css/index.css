@@ -1,0 +1,85 @@
+@import './styles.css';
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+}
+
+.eslogan {
+    color:  var(--color-quaternary);
+    font-size: 70px;
+    font-weight: bolder;
+    padding-inline: 80px;
+    width: 50vw;
+}
+.eslogan_2{
+    color:  var(--color-quinary);
+    font-size: 50px;
+    font-weight: bolder;
+    padding-inline: 80px;
+    width: 50vw;
+}
+.presentacionBrain{
+    color:  var(--color-quaternary);
+    font-size: 40px;
+    font-weight: bolder;
+    padding-inline: 80px;
+    width: 50vw;
+}
+
+.seccion-1{
+    color:  var(--color-quaternary);
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas-container{
+    width: 880px;
+    height: 500px;
+    position: relative;
+    color:  var(--color-quaternary);
+    width: 50vw;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+    
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+}
+
+.next {
+    background-color:  var(--color-quaternary);
+    color: black;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    max-width: 200px;
+}
+.next:hover {
+    background-color: rgb(0, 0, 0);
+    color: black;
+    transition-duration: 300ms;
+    transform: scale(0.9);
+}
+.next:focus,
+.next:active,
+.next:not(:hover) {
+    transition: background-color 0.8s ease;
+    background-color:  var(--color-quaternary);
+    color: black;
+    transform: scale(1);
+}
+
+
