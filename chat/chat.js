@@ -1,4 +1,4 @@
-const API_KEY = '';
+const API_KEY = 'sk-proj-BPx2gOcQ0kyRftS7pDLmT3BlbkFJsxrgvP6W0om3DAvHyWTU';
 
 async function getCompletition(prompt) {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -10,11 +10,10 @@ async function getCompletition(prompt) {
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario. Evita respuestas muy largas." },
+                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario. Evita respuestas muy largas, ademas solo haz enfasis en problemas relacionados a los sentimientos o problemas personales de una persona o grupo, no hagas tareas o cosas similares (diseño, programacion) etc." },
                 { role: "user", content: prompt }
             ],
-            //max_tokens: 100,
-            temperature: 0.7
+            temperature: 0.6
         })
     });
 
@@ -40,7 +39,7 @@ button.addEventListener('click', async () => {
 });
 
 userInput.addEventListener('keypress', async (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter') {    
         if (!userInput.value) {
             return;
         }

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font: 1em sans-serif;
+    background-color: #02111b;
+}
+
+header {
+    background-color: #02111b;
+    width: 100%;
+    max-height: 20vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: rgb(93, 115, 126);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: rgb(93, 115, 126);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding-inline: 22px;
+}
+
+main {
+    margin-top: 20vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: #f5f5f5;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 1%;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #02111b;
+    border-color: #f5f5f5;
+    color: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(222, 222, 222, 0.2);
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 1PX 4px 8px #f5f5f5;
+}
+
+.card-title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    font-size: 18px;
+    color: #5D737E;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-link {    
+    text-decoration: none;
+    text-size-adjust: calc();
+    color: #f5f5f5;
+    font-weight: bold;
+    background-color: #30292F;
+    padding: 10px 15px;
+    border-radius: 45px;
+    transition: background-color 0.3s;
+}
+
+.card-link:hover {
+    background-color: #5D737E;
+}
+
+.contenedorModelo button {
+    width: 200px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: rgb(93, 115, 126);
+    color: #02111b;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.contenedorModelo button:hover {
+    background-color: #5D737E;
+}
+
+footer {
+    padding: 30px;
+    color: rgb(93, 115, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #02111b;
+}
