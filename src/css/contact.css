@@ -22,6 +22,15 @@ header {
   font-weight: 600;
 }
 
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo:visited {
+  color: inherit; /* Mantiene el color heredado cuando el enlace ha sido visitado */
+}
+
 .logo:hover {
   opacity: 0.5;
   transition-duration: 300ms;
@@ -50,6 +59,7 @@ nav a {
   font-size: 20px;
   text-decoration: none;
   padding-inline: 22px;
+  
 }
 
 .contact-section {
