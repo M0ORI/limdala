@@ -5,9 +5,12 @@ const models = {
     "feliz": "https://prod.spline.design/f7l2nf5ghJiFh30g/scene.splinecode",
     "triste": "https://prod.spline.design/sad_model_url/scene.splinecode",
     "enojado": "https://prod.spline.design/P-MFqIrOB8GX8kQP/scene.splinecode",
-    "deprimido": "https://prod.spline.design/depressed_model_url/scene.splinecode",
-    "neutral": "https://prod.spline.design/LXqZ5ydB8lt-MHam/scene.splinecode"
+    "deprimido": "https://prod.spline.design/AQ4vwoFDgW4ZB9n1/scene.splinecode",
+    "neutral": "https://prod.spline.design/LXqZ5ydB8lt-MHam/scene.splinecode",
+    "naturaleza" :"https://prod.spline.design/V9-fJY73imv7QpmS/scene.splinecode" 
     // Agrega más estados y URLs según sea necesario
+  
+
 };
 
 async function getCompletition(prompt) {
@@ -20,7 +23,7 @@ async function getCompletition(prompt) {
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario. Evita respuestas muy largas, ademas solo haz enfasis en problemas relacionados a los sentimientos o problemas personales de una persona o grupo, no hagas tareas o cosas similares (diseño, programacion) etc. En nuestro sitio al lado del chat hay un cerebro que cambiara de color dependiendo las emociones que exprese el usuario, puedes hacer comentarios respecto a eso tambien, los colores por emocion son: (enojo: rojo, triste: azul,apagado, feliz: amarillo, dorado entre otros, me gustaria que en el segundo mensaje del usuario hagas alucion a eso y como pueden afectar las malas emociones en nuestra cabeza" },
+                { role: "system", content: "Eres un asistente virtual de apoyo personal para la salud mental. Responde de manera empática, comprensiva y de apoyo. Brinda sugerencias y consejos útiles, y siempre anima a los usuarios a buscar ayuda profesional si es necesario. Evita respuestas muy largas, ademas solo haz enfasis en problemas relacionados a los sentimientos o problemas personales de una persona o grupo, no hagas tareas o cosas similares (diseño, programacion) etc. En nuestro sitio al lado del chat hay un cerebro que cambiara de color dependiendo las emociones que exprese el usuario, puedes hacer comentarios respecto a eso tambien, los colores por emocion son: (enojo: rojo, triste: azul,apagado, feliz: amarillo, dorado entre, actividades a la naturaleza: verde, me gustaria que en el segundo mensaje del usuario hagas alucion a eso y como pueden afectar las malas emociones en nuestra cabeza, recomienta libros y articulos relacionados con la salud mental, tambien puedes mencionar que en la pagina tenemos archivos dentro del website que pueden ayudar con aspectos o simplemente aprender algo relacionado a ello, si el usuario esta en limdala es por que necesita ayuda o requiere informacion. trata de no soltar toda esta informacion de golpe, por que podria ser el mensaje muy largo y los usuarios prefieren mensajes cortos y claros." },
                 { role: "user", content: prompt }
             ],
             temperature: 0.7
@@ -34,7 +37,6 @@ async function getCompletition(prompt) {
 const button = document.getElementById('send');
 const userInput = document.getElementById('user-input');
 const loadingIndicator = document.getElementById('loading');
-
 button.addEventListener('click', async () => {
     if (!userInput.value) {
         return;
@@ -105,18 +107,30 @@ function typeText(text) {
 
 function updateModel(message) {
     let emotion = "neutral"; // Por defecto
-    if (message.includes("feliz") || message.includes("alegre") || message.includes("contento")|| message.includes("Buen dia")|| message.includes("japi")) {
-        emotion = "feliz";
-    } else if (message.includes("triste") || message.includes("deprimido")|| message.includes("sad")) {
-        emotion = "triste";
-    } else if (message.includes("enojado") || message.includes("furioso") || message.includes("molesto")) {
-        emotion = "enojado";
+    const keywords = {
+        "feliz": ["feliz", "alegre", "contento", "buen día", "japi", "felicidad","bien","vivir"],
+        "triste": ["triste", "deprimido", "sad", "abatido", "melancólico", "desanimado"],
+        "enojado": ["enojado", "furioso", "molesto", "irritado", "rabioso", "indignado","enojo"],
+        "deprimido": ["deprimido", "desesperado", "abatido", "desesperanza", "desolado", "abrumado"],
+        "naturaleza": ["naturaleza", "bosque", "montaña", "río", "mar", "relax", "relajación", "meditación", "serenidad", "paz"]
+    };
+
+    for (const emotionKey of Object.keys(keywords)) {
+        for (const keyword of keywords[emotionKey]) {
+            if (message.toLowerCase().includes(keyword)) {
+                emotion = emotionKey;
+                break;
+            }
+        }
+        if (emotion !== "neutral") {
+            break; 
+        }
     }
-    
-    console.log(`Detected emotion: ${emotion}`); // Agrega esta línea para depuración
+
+    console.log(`Detected emotion: ${emotion}`); 
     
     const modelURL = models[emotion];
-    console.log(`Model URL: ${modelURL}`); // verificar la URL
+    console.log(`Model URL: ${modelURL}`); 
     const canvasContainer = document.getElementById('canvas-container');
     const oldViewer = document.getElementById('spline-viewer');
     
@@ -131,6 +145,7 @@ function updateModel(message) {
     newViewer.setAttribute('url', modelURL);
     canvasContainer.appendChild(newViewer);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const initialMessage = "Hola, soy Limdala y estoy aquí para apoyarte en lo que necesites. ¿En qué puedo ayudarte hoy?";
