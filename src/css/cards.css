@@ -70,11 +70,11 @@ main {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);;
     gap: 20px;
     width: 100%;
     padding: 0 30px;
+    margin: 20px;
 }
 
 .card {
@@ -89,7 +89,7 @@ main {
     align-items: center;
     transition: transform 0.3s, box-shadow 0.3s;
     gap:20px;
-    width: 400px;
+    width: auto;
     height: auto;
     margin: 20px;
 }
@@ -124,6 +124,7 @@ main {
     border-radius: 45px;
     transition: background-color 0.3s;
     justify-self: self-end;
+    margin-top: auto;
 }
 
 .card-link:hover {
