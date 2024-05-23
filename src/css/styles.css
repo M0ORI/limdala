@@ -21,6 +21,15 @@ header {
     max-height: 20vh;
 }
 
+header, 
+.logo,
+.nav_bar,
+nav li,
+nav a,
+footer {
+    z-index: 10;
+}
+
 .logo {
     color:  var(--color-quinary);
     font-size: 30px;
@@ -79,7 +88,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: static;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 10vh;
@@ -91,7 +100,6 @@ a {
 
 script{
     display: inline-block;
-
 }
 
 
