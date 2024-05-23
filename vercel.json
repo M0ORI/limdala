@@ -16,12 +16,7 @@
     {
       "src": "src/images/*",
       "use": "@vercel/static"
-    },
-    {
-      "src": "public/static/*",
-      "use": "@vercel/static"
     }
-
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
