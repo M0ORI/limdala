@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 window.location.href = '/home.html'
             }).catch((error) => {
                 alert(error.error_description || error.message)
-                window.location.href = '/html/login.html'
+                window.location.href = '/login.html'
             })
         }
     )}

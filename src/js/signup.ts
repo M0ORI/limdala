@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 window.location.href = '/html/login.html'
             }).catch((error) => {
                 alert(error.error_description || error.message)
-                window.location.href = '/html/signup.html'
+                window.location.href = '/signup.html'
             })
         })
     }

@@ -1,59 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
-body {
-    font: 1em sans-serif;
-    background-color: #02111b;
-}
-
-header {
-    background-color: #02111b;
-    width: 100%;
-    max-height: 20vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.logo {
-    color: rgb(93, 115, 126);
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    opacity: 0.5;
-}
-
-.logo img {
-    margin-right: 10px;
-}
-
-.nav_bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-}
-
-nav li {
-    display: inline-block;
-}
-
-nav a {
-    color: rgb(93, 115, 126);
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    padding-inline: 22px;
-}
+@import './styles.css';
 
 main {
-    margin-top: 20vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -125,7 +72,17 @@ main {
     transition: background-color 0.3s;
     justify-self: self-end;
     margin-top: auto;
+    font-weight: 600;
 }
+
+.logo a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .logo:visited {
+    color: inherit; /* Mantiene el color heredado cuando el enlace ha sido visitado */
+  }
 
 .card-link:hover {
     background-color: #5D737E;

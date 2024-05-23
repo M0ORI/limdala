@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/home.css">
-    <link rel="stylesheet" href="./src/css/chat.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <link rel="stylesheet" href="../src/css/chat.css">
     <script src="./src/js/googleAuth.js"></script>
     <title>Límdala</title>
 </head>
@@ -12,13 +12,13 @@
     <header>
         <div class="nav_bar">
             <section class="logo">
-                <a><img src="./src/images/logo-clean.svg" alt=""></a>
+                <a><img src="../src/images/logo-clean.svg" alt=""></a>
                 <a>Límdala</a>
             </section>
             <nav>
                 <ul>
-                    <li><a href="html/contact.html">Contacto</a></li>
-                    <li><a href="html/cards.html">Salud mental</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="cards.html">Salud mental</a></li>
                     <li><a id="userName"></a></li>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="#logout" id="logoutLink">Cerrar sesión</a>
@@ -40,7 +40,7 @@
                     <div class="chat" id="message-log"></div>
                     <div class="input">
                         <input class="message-input" id="user-input" type="text" placeholder="Escribe tu mensaje...">
-                        <button id="send"><img src="./src/images/send_icon.png" alt="Enviar"></button>
+                        <button id="send"><img src="../src/images/send_icon.png" alt="Enviar"></button>
                     </div>
                     <div id="loading" class="loading" style="display: none;">Escribiendo...</div>
                 </section>
@@ -58,8 +58,8 @@
             <p>© 2024 Límdala. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="./src/js/chat.js"></script>
-    <script type="module" src="./src/js/home.ts"></script>
-    <script type="module" src="./src/js/logout.ts"></script>
+    <script src="../src/js/chat.js"></script>
+    <script type="module" src="../src/js/home.ts"></script>
+    <script type="module" src="../src/js/logout.ts"></script>
 </body>
 </html>
