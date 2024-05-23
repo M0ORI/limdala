@@ -29,6 +29,10 @@ header {
     opacity: 0.5;
 }
 
+.logo img {
+    margin-right: 10px;
+}
+
 .nav_bar {
     display: flex;
     justify-content: space-between;
@@ -62,14 +66,15 @@ main {
     font-weight: bolder;
     text-align: center;
     margin-bottom: 20px;
-    padding-bottom: 1%;
 }
 
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 20px;
+    width: 100%;
+    padding: 0 30px;
 }
 
 .card {
@@ -78,13 +83,15 @@ main {
     color: #f5f5f5;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(222, 222, 222, 0.2);
-    width: 300px;
-    height: 350px;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    gap:20px;
+    width: 400px;
+    height: auto;
+    margin: 20px;
 }
 
 .card:hover {
@@ -104,38 +111,28 @@ main {
     color: #5D737E;
     text-align: center;
     margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 500;
 }
 
 .card-link {    
     text-decoration: none;
-    text-size-adjust: calc();
     color: #f5f5f5;
     font-weight: bold;
     background-color: #30292F;
     padding: 10px 15px;
     border-radius: 45px;
     transition: background-color 0.3s;
+    justify-self: self-end;
 }
 
 .card-link:hover {
     background-color: #5D737E;
 }
-
-.contenedorModelo button {
-    width: 200px;
-    height: 70px;
-    border-radius: 50px;
-    background-color: rgb(93, 115, 126);
-    color: #02111b;
-    font-size: 25px;
-    font-weight: bolder;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-}
-
-.contenedorModelo button:hover {
-    background-color: #5D737E;
+.card-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 footer {
@@ -144,7 +141,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
     background-color: #02111b;
