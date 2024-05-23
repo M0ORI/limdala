@@ -1,4 +1,4 @@
-const API_KEY = 'sk-proj-Lf76LDiNy5o3ETAs2X0KT3BlbkFJSzc21WuNSHDQ9RW8bIM0';
+const API_KEY = '';
 
 // URLs de los modelos 3D para diferentes estados emocionales
 const models = {
