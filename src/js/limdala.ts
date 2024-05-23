@@ -12,7 +12,7 @@ export const isUserLoggedIn = async () => {
     await supabase.auth.onAuthStateChange((event, session) => {
         if (!session) {
             alert('You are not logged in')
-            window.location.href = '/html/login.html'
+            window.location.href = '/login.html'
         }
     })
 }
