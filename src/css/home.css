@@ -51,3 +51,34 @@ main {
     font-size: 25px;
     font-weight:bolder;
 }
+
+/* dropdown */
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    min-width: 160px;
+    border-top: 1px solid var(--color-quaternary);
+    top: 100px;
+    right: 70px;
+    z-index: 1;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.dropdown-content a {
+    color: var(--color-quaternary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.dropdown-content a:hover {
+    color: var(--color-quinary);
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}

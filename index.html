@@ -20,12 +20,6 @@
         <img src="./src/images/logo-clean.svg" alt="Límdala Logo">
         <a>Límdala</a>
       </section>
-      <nav>
-        <ul>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Salud mental</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
@@ -38,9 +32,17 @@
 
     <div class="seccion-1">
       <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
-<spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/YQQdrnszUvArQLGX/scene.splinecode"></spline-viewer>
-      <li><a href="/html/login.html" id="log-sig">Ingresar</a></li>
-      <li><a href="/html/signup.html" id="log-sig">Registrarse</a></li>
+      <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/YQQdrnszUvArQLGX/scene.splinecode"></spline-viewer>
+      <style>
+        spline-viewer {
+            position: fixed;
+            left: 20%;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+      </style>
+      <li id="log-sig-li"><a href="/html/login.html" id="log-sig">Ingresar</a></li>
     </div>
   </main>
   <footer>
