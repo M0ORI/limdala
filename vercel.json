@@ -23,6 +23,14 @@
     { "src": "/login", "dest": "/login.html" },
     { "src": "/login.html", "dest": "/login.html" },
     { "src": "/css/(.*)", "dest": "/css/$1" },
-    { "src": "/js/(.*)", "dest": "/js/$1" }
+    { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/contact.html", "dest": "/contact.html" },
+    { "src": "/home", "dest": "/home.html" },
+    { "src": "/home.html", "dest": "/home.html" },
+    { "src": "/cards", "dest": "/cards.html" },
+    { "src": "/cards.html", "dest": "/cards.html" },
+    { "src": "/signup", "dest": "/signup.html" },
+    { "src": "/signup.html", "dest": "/signup.html" }
   ]
 }
